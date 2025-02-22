@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Loja Online</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <script src="finalizar_compras.js"></script>
+    <!-- Correção na atribuição da fonte -->
+  </head>
+
+  <body>
+    <header>
+      <h1>Minha Loja Online</h1>
+      <nav>
+        <ul>
+          <!-- Adicione links para outras páginas aqui -->
+        </ul>
+      </nav>
+    </header>
+
+    <main class="grid-container">
+      <section class="produtos">
+        <div class="produto">
+          <h3>Produto 1</h3>
+          <p>Preço: 60.00</p>
+          <button
+            class="adicionar-ao-carrinho"
+            data-nome="Produto 1"
+            data-preco="60.00"
+          >
+            Adicionar ao Carrinho
+          </button>
+        </div>
+        <div class="produto">
+          <h3>Produto 2</h3>
+          <p>Preço: 250.00</p>
+          <button
+            class="adicionar-ao-carrinho"
+            data-nome="Produto 2"
+            data-preco="250.00"
+          >
+            Adicionar ao Carrinho
+          </button>
+        </div>
+        <div class="produto">
+          <h3>Produto 3</h3>
+          <p>Preço: 25.99</p>
+          <button
+            class="adicionar-ao-carrinho"
+            data-nome="Produto 3"
+            data-preco="25.99"
+          >
+            Adicionar ao Carrinho
+          </button>
+        </div>
+                    <div class="produto">
+                <h3>Produto 4</h3>
+                <P>Preço: 35.50</P>
+                <button class="adicionar-ao-carrinho" data-nome="Produto 4" data-preco="35.50">Adicionar ao
+                    Carrinho</button>
+            </div>
+      </section>
+
+      <section class="carrinho">
+        <h2>Carrinho de Compras</h2>
+        <ul id="lista-carrinho">
+          <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+        </ul>
+        <div id="subtotal" class="subtotal">
+          <p>Subtotal: R$ <span id="subtotal-valor">0.00</span></p>
+          <a href="finalizar_compra.html">Finalizar Compra</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Minha Loja Online</p>
+    </footer>
+  </body>
+</html>
