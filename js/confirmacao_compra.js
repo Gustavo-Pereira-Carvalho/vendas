@@ -33,5 +33,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // Redireciona automaticamente após 5 segundos
     setTimeout(function () {
         window.location.href = 'agradecimento.html'; // Redireciona para a página de agradecimento
-    }, 5000); // 5 segundos
+    }, 500000); // 5 segundos
 });

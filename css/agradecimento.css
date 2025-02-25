@@ -1,8 +1,8 @@
-/* Estilos para agradecimento.html */
+/* Estilos para a página de agradecimento */
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #e9f7f7;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
@@ -16,36 +16,58 @@ header {
 
 .container {
     width: 80%;
-    max-width: 500px;
-    margin: 20px auto;
+    max-width: 600px;
+    margin: 40px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-h1 {
-    font-size: 26px;
-    color: #ffffff;
-}
-
-.mensagem-agradecimento {
-    font-size: 24px;
-    color: #333;
+h2 {
+    font-size: 28px;
     margin-bottom: 20px;
+    color: #333;
 }
 
-button {
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+button.botao-inicio {
     background-color: #007bff;
     color: #fff;
-    padding: 10px 20px;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+button.botao-inicio:hover {
     background-color: #0056b3;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button.botao-inicio {
+        width: 100%;
+        padding: 12px;
+    }
 }

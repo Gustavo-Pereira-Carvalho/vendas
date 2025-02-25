@@ -1,3 +1,5 @@
+/* Estilos para finalizar_compra.html */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -14,7 +16,7 @@ header {
 
 .container {
     width: 80%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -34,24 +36,33 @@ form {
     padding: 0;
 }
 
-.form-content {
+.content-wrapper {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Espaço entre as colunas */
+    gap: 60px;
 }
 
-.dados-cliente,
-.resumo-carrinho {
-    flex: 1;
+.form-content, .inf-client {
+    width: 48%; /* Cada parte ocupa metade do espaço */
 }
 
-.dados-cliente input,
-.dados-cliente textarea {
+.input-container {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 20px;
     font-size: 16px;
 }
 
@@ -63,6 +74,7 @@ button[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -70,11 +82,35 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-.resumo-carrinho ul {
-    list-style-type: none;
-    padding: 0;
+/* Estilos para finalizar_compra.css */
+
+.inf-client {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #cfcccc;
+    border-radius: 5px;
+    color: #615f5f;
 }
 
-.resumo-carrinho li {
-    margin-bottom: 10px;
+ul {
+    padding-left: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .content-wrapper {
+        flex-direction: column; /* Colunas se tornam empilhadas em telas menores */
+    }
+
+    .form-content, .inf-client {
+        width: 100%;
+    }
+
+    button[type="submit"] {
+        width: auto;
+    }
 }

@@ -4,40 +4,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Função para exibir o resumo do carrinho na página de finalização de compra
     function exibirResumoCarrinho() {
-        resumoCarrinho.innerHTML = ''; // Limpa o conteúdo do resumo
+        // Limpe o conteúdo anterior do resumo do carrinho
+        resumoCarrinho.innerHTML = '';
 
+        // Recupere os itens do carrinho do armazenamento local (ou de onde você os armazenou)
         const carrinhoItens = JSON.parse(localStorage.getItem('carrinho')) || [];
 
+        // Verifique se o carrinho está vazio
         if (carrinhoItens.length === 0) {
             resumoCarrinho.innerHTML = '<p>O seu carrinho está vazio.</p>';
             return;
         }
 
-        // Exibe os itens do carrinho
-        carrinhoItens.forEach(item => {
+        // Exiba cada item do carrinho no resumo
+        carrinhoItens.forEach((item) => {
             const listItem = document.createElement('li');
             listItem.textContent = `${item.nome} x${item.quantidade}`;
             resumoCarrinho.appendChild(listItem);
         });
     }
 
-    // Chama a função para exibir o resumo do carrinho
+    // Chamada inicial para exibir o resumo do carrinho
     exibirResumoCarrinho();
 
-    // Manipula o envio do formulário
+    // Manipule o envio do formulário
     formularioCompra.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        // Coleta os dados do cliente
+        // Aqui, você pode adicionar a lógica para processar a compra
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
         const endereco = document.getElementById('endereco').value;
 
-        // Exibe uma mensagem de sucesso
+        // Simule uma mensagem de sucesso
         const mensagem = `Compra finalizada com sucesso!\n\nDetalhes da Compra:\nNome: ${nome}\nEmail: ${email}\nEndereço: ${endereco}`;
         alert(mensagem);
 
-        // Redireciona para a página de agradecimento
-        window.location.href = 'agradecimento.html';
+        // Redireciona o usuário para a página de confirmação de compra
+        window.location.href = 'confirmacao_compra.html'; // Aqui a página será redirecionada
     });
 });
