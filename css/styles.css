@@ -100,3 +100,58 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        /* Layout em uma coluna em telas pequenas */
+    }
+
+    .produtos, .carrinho {
+        margin-bottom: 20px;
+    }
+
+    .produto h3 {
+        font-size: 16px;
+    }
+
+    .produto p {
+        font-size: 14px;
+    }
+
+    .adicionar-ao-carrinho {
+        padding: 8px 16px;
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .produto h3 {
+        font-size: 14px;
+    }
+
+    .produto p {
+        font-size: 12px;
+    }
+
+    .adicionar-ao-carrinho {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

@@ -1,5 +1,4 @@
-/* Estilos para confirmar_compra.html */
-
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -16,7 +15,7 @@ header {
 
 .container {
     width: 80%;
-    max-width: 800px;
+    max-width: 600px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -39,57 +38,53 @@ button.botao-inicio {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
 }
 
 button.botao-inicio:hover {
     background-color: #0056b3;
 }
 
-/* Estilos para as informações */
-
+/* Estilo para informações */
 .informacoes {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#dados-cliente, #resumo-carrinho {
-    background-color: #f9f9f9;
-    padding: 15px;
+.informacoes > div {
+    width: 48%; /* Divisão da largura em 2 colunas */
+}
+
+#dados-cliente,
+#resumo-carrinho {
+    background-color: #f0f0f0;
+    padding: 20px;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 48%; /* Ajusta a largura das duas seções */
-}
-
-#dados-cliente h3, #resumo-carrinho h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-ul {
-    padding-left: 20px;
+    margin: 10px 0;
 }
 
 /* Responsividade */
-
 @media (max-width: 768px) {
     .container {
         width: 90%;
     }
 
     .informacoes {
-        flex-direction: column; /* Colunas se tornam empilhadas em telas menores */
+        flex-direction: column;
     }
 
-    #dados-cliente, #resumo-carrinho {
+    .informacoes > div {
         width: 100%;
-        margin-bottom: 15px; /* Espaçamento entre os dois blocos */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
     }
 
     button.botao-inicio {
-        width: auto;
+        padding: 10px 15px;
     }
 }

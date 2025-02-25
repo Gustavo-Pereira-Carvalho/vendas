@@ -1,5 +1,4 @@
-/* Estilos para finalizar_compra.html */
-
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -16,7 +15,7 @@ header {
 
 .container {
     width: 80%;
-    max-width: 1000px;
+    max-width: 600px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -36,23 +35,9 @@ form {
     padding: 0;
 }
 
-.content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.form-content, .inf-client {
-    width: 48%; /* Cada parte ocupa metade do espaço */
-}
-
-.input-container {
-    margin-bottom: 15px;
-}
-
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -63,6 +48,7 @@ textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 20px;
     font-size: 16px;
 }
 
@@ -74,26 +60,22 @@ button[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%;
-    margin-top: 20px;
 }
 
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Estilos para finalizar_compra.css */
-
+/* Estilo para resumo do carrinho */
 .inf-client {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     padding: 20px;
-    border: 1px solid #cfcccc;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    color: #615f5f;
-}
-
-ul {
-    padding-left: 20px;
+    color: #333;
+    margin-top: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 /* Responsividade */
@@ -102,15 +84,24 @@ ul {
         width: 90%;
     }
 
-    .content-wrapper {
-        flex-direction: column; /* Colunas se tornam empilhadas em telas menores */
+    .inf-client {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
     }
 
-    .form-content, .inf-client {
-        width: 100%;
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px;
     }
 
     button[type="submit"] {
-        width: auto;
+        padding: 10px 15px;
     }
 }
